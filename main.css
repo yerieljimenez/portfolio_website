@@ -321,6 +321,7 @@ body {
     font-family: "Montserrat", sans-serif;
     padding: 100px 0 50px;
     text-align: center;
+    background: #DE8971;
   }
   
   #skills {
@@ -337,11 +338,12 @@ body {
   
   #skills {
     padding: 100px 0;
-    background-color: #fff
+    background-color: #476072
   }
   
   #portfolio {
     padding: 100px 0;
+    background-color: #334257;
   }
 
   .image {
