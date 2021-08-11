@@ -153,12 +153,6 @@ body {
   .offset-by-one-half.columns {
     margin-left: 52%;
   }
-  #progressBar {
-    width: 100%;
-    height: 3px;
-    background: #e1e1e1;
-    overflow: hidden;
-  }
 }
 
 @media (min-width: 550px) {
@@ -675,32 +669,13 @@ nav ul a:hover {
   text-align: center;
 }
 
-.progressBar {
-  width: 150%;
-  margin-bottom: 26px;
-  margin-bottom: 1.66em;
+#portfolio {
+  font-family: "Montserrat", sans-serif;
+  padding: 100px;
+  text-align: center;
 }
 
-.progressBar h4 {
-  font-size: 16px;
-  text-transform: none;
-  margin-bottom: 2px;
-  margin-bottom: 0.33em;
-}
 
-.progressBarContainer {
-  width: 100%;
-  height: 3px;
-  background: #e1e1e1;
-  overflow: hidden;
-}
-
-.progressBarValue {
-  height: 8px;
-  float: left;
-  background: #141e30;
-  background: linear-gradient(135deg, #243b55 0, #141e30 100%);
-}
 
 .value-00 {
   width: 0;
@@ -774,11 +749,6 @@ nav ul a:hover {
   background-position: center;
 }
 
-#testimonial {
-  background-color: none;
-  padding: 100px 0;
-}
-
 .quoteLoop {
   height: auto;
   width: 100%;
@@ -822,4 +792,4 @@ section .icons {
   display: table;
   clear: both;
 }
-/*# sourceMappingURL=main.css.map */
+
