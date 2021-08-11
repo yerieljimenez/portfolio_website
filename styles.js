@@ -1,6 +1,4 @@
-/*----------------------------------------------------*/
-/* Quote Loop
------------------------------------------------------- */
+// Quote Loop
 
 function fade($ele) {
   $ele
@@ -20,9 +18,7 @@ function fade($ele) {
 }
 fade($(".quoteLoop > .quote").first());
 
-/*----------------------------------------------------*/
-/* Navigation
------------------------------------------------------- */
+// Navigation
 
 $(window).scroll(function() {
   if ($(window).scrollTop() > 300) {
@@ -32,7 +28,8 @@ $(window).scroll(function() {
   }
 });
 
-// Mobile Navigation
+// Mobile Nav
+
 $(".mobile-toggle").click(function() {
   if ($(".main_nav").hasClass("open-nav")) {
     $(".main_nav").removeClass("open-nav");
@@ -48,9 +45,8 @@ $(".main_nav li a").click(function() {
   }
 });
 
-/*----------------------------------------------------*/
-/* Smooth Scrolling
------------------------------------------------------- */
+
+// Smooth Scrolling
 
 jQuery(document).ready(function($) {
   $(".smoothscroll").on("click", function(e) {
