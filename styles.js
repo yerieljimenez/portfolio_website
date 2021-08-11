@@ -1,23 +1,3 @@
-// Quote Loop
-
-function fade($ele) {
-  $ele
-    .fadeIn(1000)
-    .delay(3000)
-    .fadeOut(1000, function() {
-      var $next = $(this).next(".quote");
-      fade(
-        $next.length > 0
-          ? $next
-          : $(this)
-              .parent()
-              .children()
-              .first()
-      );
-    });
-}
-fade($(".quoteLoop > .quote").first());
-
 // Navigation
 
 $(window).scroll(function() {
@@ -48,26 +28,19 @@ $(".main_nav li a").click(function() {
 
 // Smooth Scrolling
 
-jQuery(document).ready(function($) {
-  $(".smoothscroll").on("click", function(e) {
-    e.preventDefault();
+const links = document.querySelectorAll(".smoothscroll");
 
-    var target = this.hash,
-      $target = $(target);
+for (const link of links) {
+  link.addEventListener("click", clickHandler);
+}
 
-    $("html, body")
-      .stop()
-      .animate(
-        {
-          scrollTop: $target.offset().top
-        },
-        800,
-        "swing",
-        function() {
-          window.location.hash = target;
-        }
-      );
+function clickHandler(e) {
+  e.preventDefault();
+  const href = this.getAttribute("href");
+  const offsetTop = document.querySelector(href).offsetTop;
+
+  scroll({
+    top: offsetTop,
+    behavior: "smooth"
   });
-});
-
-TweenMax.staggerFrom(".heading", 0.8, { opacity: 0, y: 20, delay: 0.2 }, 0.4);
+}
